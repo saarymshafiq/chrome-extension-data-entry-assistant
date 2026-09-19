@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Portal DOB Copier",
+  "version": "1.0",
+  "description": "Copies the patient DOB from the portal with a keyboard shortcut.",
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "copy-dob": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+D"
+      },
+      "description": "Copy patient DOB"
+    }
+  },
+  "host_permissions": [
+    "*://*.secure.simplepractice.com/*"
+  ]
+}
